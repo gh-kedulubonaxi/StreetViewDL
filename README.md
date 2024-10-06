@@ -1,5 +1,5 @@
 # StreetViewDL
-Downloads [all the tiles](https://raw.githubusercontent.com/gh-kedulubonaxi/StreetViewDL/refs/heads/main/readme_assets/tiles.png) from a streetview scene and creates a panoramic image that can be viewed offline.
+Downloads [all the tiles](https://raw.githubusercontent.com/gh-kedulubonaxi/StreetViewDL/refs/heads/main/readme_assets/tiles.png) from a streetview scene and creates a 360-degree image that can be viewed offline.
 
 Makes for a nice wallpaper
 ![image](https://github.com/gh-kedulubonaxi/StreetViewDL/blob/main/readme_assets/aSch6QZq6rdz9xDxI7uzkA_preview.png)
