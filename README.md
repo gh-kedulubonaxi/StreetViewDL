@@ -1,17 +1,21 @@
 # StreetViewDL
 Downloads [all the tiles](https://raw.githubusercontent.com/gh-kedulubonaxi/StreetViewDL/refs/heads/main/readme_assets/tiles.png) from a streetview scene and creates a panoramic image that can be viewed offline.
 
-![image](https://github.com/gh-kedulubonaxi/StreetViewDL/blob/main/readme_assets/description.png)
-
+Makes for a nice wallpaper
 ![image](https://github.com/gh-kedulubonaxi/StreetViewDL/blob/main/readme_assets/aSch6QZq6rdz9xDxI7uzkA_preview.png)
-[Full size example image (16384x8192, 86.39 MB)](https://github.com/gh-kedulubonaxi/StreetViewDL/blob/main/readme_assets/aSch6QZq6rdz9xDxI7uzkA.png)
+[Full size original example image (16384x8192, 86.39 MB)](https://github.com/gh-kedulubonaxi/StreetViewDL/blob/main/readme_assets/aSch6QZq6rdz9xDxI7uzkA.png)
 
-### Requirements
+Or you can view it in any player that supports 360-degree images/videos:
+
+https://github.com/user-attachments/assets/b8af9c84-e058-419c-a2a4-c42bf7da3997
+
+## Requirements
 * [Python3](https://www.python.org/)
 * [ImageMagick](https://imagemagick.org/index.php)
+  
 They have to be on the PATH so that their commands are available globally on the command line.
 
-### Usage
+## Usage
 Find a streetview scene you like, copy the URL and run the "StreetViewDL.py" script with the URL in quotation marks as a parameter:
 
 ```PowerShell
@@ -20,5 +24,35 @@ python StreetViewDL.py "https://www.google.com/maps/@35.6986805,139.7714552,3a,9
 
 ![image](https://github.com/gh-kedulubonaxi/StreetViewDL/blob/main/readme_assets/powershell.png)
 
-### Result
-After it's done you should find a folder, named after the panoid of the streetview scene, containing the finished picture and a folder with all the tiles.
+## Result
+After it's done you should find a folder, named after the "panoid" of the streetview scene, containing the finished picture and a folder with all the tiles.
+![image](https://github.com/gh-kedulubonaxi/StreetViewDL/blob/main/readme_assets/description.png)
+
+## Problems/solutions
+
+I've encountered these problems on Ubuntu:
+### convert-im6.q16: width or height exceeds limit
+
+Change these lines in */etc/ImageMagick-6/policy.xml*:
+
+```
+<policy domain="resource" name="width" value="16KP"/>
+<policy domain="resource" name="height" value="16KP"/>
+```
+to
+```
+<policy domain="resource" name="width" value="32KP"/>
+<policy domain="resource" name="height" value="32KP"/>
+```
+
+### montage-im6.q16: cache resources exhausted
+
+Change this line in */etc/ImageMagick-6/policy.xml*:
+
+```
+<policy domain="resource" name="disk" value="1GiB"/>
+```
+to
+```
+<policy domain="resource" name="disk" value="8GB"/>
+```
