@@ -1,5 +1,5 @@
 # StreetViewDL
-Downloads [all the tiles](https://raw.githubusercontent.com/gh-kedulubonaxi/StreetViewDL/refs/heads/main/readme_assets/tiles.png) from a streetview scene and creates a 360-degree image that can be viewed offline.
+Downloads all the tiles from a streetview scene and creates a 360-degree image that can be viewed offline.
 
 Makes for a nice wallpaper
 ![image](https://github.com/gh-kedulubonaxi/StreetViewDL/blob/main/readme_assets/aSch6QZq6rdz9xDxI7uzkA_preview.png)
@@ -25,7 +25,7 @@ python StreetViewDL.py "https://www.google.com/maps/@35.6986805,139.7714552,3a,9
 ![image](https://github.com/gh-kedulubonaxi/StreetViewDL/blob/main/readme_assets/powershell.png)
 
 ## Result
-After it's done you should find a folder, named after the "panoid" of the streetview scene, containing the finished picture and a folder with all the tiles.
+After it's done you should find a folder, named after the "panoid" of the streetview scene, containing the finished picture and [a folder with all the tiles.](https://raw.githubusercontent.com/gh-kedulubonaxi/StreetViewDL/refs/heads/main/readme_assets/tiles.png) 
 ![image](https://github.com/gh-kedulubonaxi/StreetViewDL/blob/main/readme_assets/description.png)
 
 ## Problems/solutions
